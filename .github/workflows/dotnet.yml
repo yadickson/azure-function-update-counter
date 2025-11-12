@@ -27,5 +27,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Test coverage
       run: dotnet execute test:coverage
-    - name: Test
+    - name: Test mutation
       run: dotnet execute test:mutation
