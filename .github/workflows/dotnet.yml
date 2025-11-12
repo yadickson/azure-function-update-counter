@@ -19,13 +19,13 @@ jobs:
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: ${{ matrix.dotnet }}
-    - name: Dotnet version
-      run: |
-        which dotnet
-        dotnet --version
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet execute test
+    - name: Test coverage
+      run: dotnet execute test:coverage
+    - name: Test
+      run: dotnet execute test:mutation
