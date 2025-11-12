@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet execute test
+      run: dotnet test --no-build --verbosity normal
     - name: Test coverage
       run: dotnet execute test:coverage
     - name: Test
