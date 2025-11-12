@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet: [ '8.x', '9.x', '10.x' ]
+        dotnet: [ '8.x', '9.x', '10.x', 'latest' ]
     steps:
     - uses: actions/checkout@v5
     - name: Setup dotnet ${{ matrix.dotnet }}
@@ -20,7 +20,9 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet }}
     - name: Dotnet version
-      run: dotnet --version
+      run: |
+        which dotnet
+        dotnet --version
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
