@@ -1,0 +1,19 @@
+{
+  "stryker-config": {
+    "reporters": [
+      "progress",
+      "html"
+    ],
+    "baseline": { "enabled": false },
+    "mutation-level": "Advanced",
+    "concurrency": 1,
+    "thresholds": {
+      "high": 100,
+      "low": 90,
+      "break": 90
+    },
+    "coverage-analysis": "perTestInIsolation",
+    "ignore-mutations": [
+    ]
+  }
+}

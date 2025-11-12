@@ -1,0 +1,20 @@
+{
+	"name":"Update Counter AzureFunction ",
+	"env":{
+		"NO_COLOR": 0,
+		"FORCE_COLOR": 1,
+		"DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION": 1,
+		"ASPNETCORE_DB_CONNECTION_STRING": "ConnectionString"
+	},
+	"commands":{ 
+		"update": ["dotnet outdated -i -vl Major -t -u"],
+		"clean": ["dotnet restore", "dotnet clean"],
+		"build": ["dotnet restore", "dotnet clean", "dotnet build -c Release"],
+		"format": ["dotnet restore", "dotnet clean", "dotnet format Application.sln", "dotnet jb cleanupcode --no-build Application.sln --jobs=1", "dotnet roslynator format Application.sln"],
+		"lint": ["dotnet jb inspectcode --no-build Application.sln --jobs=1 --output=./reports/lint/index.html --format=Html"],
+		"test": ["dotnet restore", "dotnet clean", "dotnet test -c Debug"],
+		"test:coverage": ["dotnet restore", "dotnet clean", "dotnet test -c Debug /p:CollectCoverage=true -m:1", "dotnet reportgenerator -reports:./coverage/coverage.cobertura.xml -targetdir:./reports/coverage -reporttypes:Html minimumCoverageThresholds:lineCoverage=100 minimumCoverageThresholds:branchCoverage=100 minimumCoverageThresholds:methodCoverage=100"],
+		"test:mutation": ["dotnet restore", "dotnet clean", "dotnet stryker --output ."],
+		"start": ["dotnet restore", "func start --dotnet-isolate --port 7001"]
+	}
+}
