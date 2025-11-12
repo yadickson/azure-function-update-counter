@@ -26,8 +26,8 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build /p:CollectCoverage=true -m:1
     - name: Test coverage
-      run: dotnet execute test:coverage
+      run: dotnet reportgenerator -reports:./coverage/coverage.cobertura.xml -targetdir:./reports/coverage -reporttypes:Html minimumCoverageThresholds:lineCoverage=100 minimumCoverageThresholds:branchCoverage=100 minimumCoverageThresholds:methodCoverage=100
     - name: Test mutation
-      run: dotnet execute test:mutation
+      run: dotnet stryker --output . -m:1
