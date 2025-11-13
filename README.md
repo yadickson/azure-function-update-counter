@@ -2,7 +2,7 @@
 
 [![build](https://img.shields.io/github/actions/workflow/status/yadickson/azure-function-update-counter/dotnet.yml?branch=main&style=flat-square)](https://github.com/yadickson/azure-function-update-counter/actions/workflows/dotnet.yml)
 ![tests](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2F2edc636fc2ff6aff4b056d455f3290be%2Fraw%2Fazure-function-update-counter-junit-tests.json)
-![coverage](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2F2edc636fc2ff6aff4b056d455f3290be%2Fraw%2Fazure-function-update-counter-jacoco-coverage.json)
+![coverage](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2F2edc636fc2ff6aff4b056d455f3290be%2Fraw%2Fazure-function-update-counter-cobertura-coverage.json)
 
 Azure Function To Update Counter
 
