@@ -98,55 +98,55 @@ dotnet restore
 ## Update project
 
 ```bash
-dotnet execute update
+dotnet r update
 ```
 
 ## Clean project
 
 ```bash
-dotnet execute clean
+dotnet r clean
 ```
 
 ## Build project
 
 ```bash
-dotnet execute build
+dotnet r build
 ```
 
 ## Format project
 
 ```bash
-dotnet execute format
+dotnet r format
 ```
 
 ## Running Lint
 
 ```bash
-dotnet execute lint
+dotnet r lint
 ```
 
 ## Running Unit test
 
 ```bash
-dotnet execute test
+dotnet r test
 ```
 
 ## Running Coverage Test
 
 ```bash
-dotnet execute test:coverage
+dotnet r test:coverage
 ```
 
 ## Running Mutation Test
 
 ```bash
-dotnet execute test:mutation
+dotnet r test:mutation
 ```
 
 ## Running Azure Function
 
 ```bash
-dotnet execute start
+dotnet r start
 ```
 
 ## Set version using recursive project modification

@@ -38,8 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Application.Api.Abstractions/Application.Api.Abstractions.csproj" />
-    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" />
+    <ProjectReference Include="../../src/Application.Api.Abstractions/Application.Api.Abstractions.csproj" PrivateAssets="All" />
+    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

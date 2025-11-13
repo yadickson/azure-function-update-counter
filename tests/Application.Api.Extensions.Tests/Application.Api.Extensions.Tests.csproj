@@ -46,6 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../src/Application.Api/Application.Api.csproj" />
+    <ProjectReference Include="../../src/Application.Api.Abstractions/Application.Api.Abstractions.csproj" />
     <ProjectReference Include="../../src/Application.Api.Extensions/Application.Api.Extensions.csproj" />
   </ItemGroup>
 

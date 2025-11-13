@@ -21,15 +21,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet r build
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet r test
     - name: Test coverage
-      run: |
-        dotnet test --no-build --verbosity normal /p:CollectCoverage=true -m:1
-        dotnet reportgenerator -reports:./coverage/coverage.cobertura.xml -targetdir:./reports/coverage -reporttypes:Html minimumCoverageThresholds:lineCoverage=0 minimumCoverageThresholds:branchCoverage=0 minimumCoverageThresholds:methodCoverage=0
-    - name: Test mutation
-      run: dotnet stryker --output . -m:1
+      run: dotnet r test:coverage
     - name: Badge
       if: ${{ ( github.ref == format('refs/heads/{0}', github.event.repository.default_branch) ) && ( matrix.dotnet == '8.x' ) }}
       uses: gaelgirodon/ci-badges-action@v1

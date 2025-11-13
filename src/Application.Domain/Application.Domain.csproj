@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" />
+    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" />
-    <ProjectReference Include="../../src/Application.Infrastructure.Abstractions/Application.Infrastructure.Abstractions.csproj" />
-    <ProjectReference Include="../../src/Application.Infrastructure/Application.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" PrivateAssets="All" />
+    <ProjectReference Include="../../src/Application.Infrastructure.Abstractions/Application.Infrastructure.Abstractions.csproj" PrivateAssets="All" />
+    <ProjectReference Include="../../src/Application.Infrastructure/Application.Infrastructure.csproj" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

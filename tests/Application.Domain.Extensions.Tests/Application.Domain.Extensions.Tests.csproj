@@ -46,6 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../../src/Application.Domain/Application.Domain.csproj" />
+    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" />
     <ProjectReference Include="../../src/Application.Domain.Extensions/Application.Domain.Extensions.csproj" />
   </ItemGroup>
 

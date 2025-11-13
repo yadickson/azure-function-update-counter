@@ -50,6 +50,7 @@
   <ItemGroup>
     <ProjectReference Include="../../src/Application.Api/Application.Api.csproj" />
     <ProjectReference Include="../../src/Application.Api.Abstractions/Application.Api.Abstractions.csproj" />
+    <ProjectReference Include="../../src/Application.Domain.Abstractions/Application.Domain.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

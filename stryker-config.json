@@ -1,19 +1,30 @@
 {
   "stryker-config": {
-    "reporters": [
-      "progress",
-      "html"
-    ],
-    "baseline": { "enabled": false },
-    "mutation-level": "Advanced",
+    "solution": "./Application.sln",
     "concurrency": 1,
+    "mutation-level": "Basic",
+    "language-version": "Latest",
+    "additional-timeout": 500,
+    "mutate": [
+      "./src/**/*.cs",
+      "!./tests/**/*"
+    ],
+    "coverage-analysis": "perTest",
+    "disable-bail": false,
+    "disable-mix-mutants": false,
     "thresholds": {
       "high": 100,
       "low": 90,
       "break": 0
     },
-    "coverage-analysis": "perTestInIsolation",
-    "ignore-mutations": [
-    ]
+    "verbosity": "info",
+    "reporters": [
+      "html",
+      "cleartext",
+      "progress",
+      "dots"
+    ],
+    "report-file-name": "mutation-report",
+    "break-on-initial-test-failure": false    
   }
 }

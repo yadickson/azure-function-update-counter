@@ -51,13 +51,6 @@
       ],
       "rollForward": false
     },
-    "dotnet-coverage": {
-      "version": "18.1.0",
-      "commands": [
-        "dotnet-coverage"
-      ],
-      "rollForward": false
-    },
     "jetbrains.dotcover.commandlinetools": {
       "version": "2025.2.4",
       "commands": [
@@ -65,10 +58,17 @@
       ],
       "rollForward": false
     },
-    "dotnet-tool-exec": {
-      "version": "3.1.1",
+    "run-script": {
+      "version": "0.6.0",
       "commands": [
-        "execute"
+        "r"
+      ],
+      "rollForward": false
+    },
+    "rimraf": {
+      "version": "0.3.1",
+      "commands": [
+        "rimraf"
       ],
       "rollForward": false
     }
