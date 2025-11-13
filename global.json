@@ -1,11 +1,11 @@
 {
   "scripts": {
     "update": "dotnet outdated -i -vl Major -t -u",
-		"clean": "dotnet restore && dotnet clean && dotnet rimraf **/bin **/obj coverage reports",
+		"clean": "dotnet restore && dotnet clean && dotnet rimraf **/bin **/obj **/TestResults coverage reports",
 		"build": "dotnet r clean && dotnet build -c Release",
 		"format": "dotnet r clean && dotnet format Application.sln && dotnet jb cleanupcode --no-build Application.sln --jobs=1 && dotnet roslynator format Application.sln",
 		"lint": "dotnet jb inspectcode --no-build Application.sln --jobs=1 --output=./reports/lint/index.html --format=Html",
-		"test": "dotnet r clean && dotnet test -c Debug",
+		"test": "dotnet r clean && dotnet test -c Debug --logger:\"junit;LogFilePath=TestResults/junit-test-results.xml\"",
 		"test:coverage": "dotnet r clean && dotnet test -c Debug /p:CollectCoverage=true -m:1 && dotnet reportgenerator -reports:./coverage/coverage.cobertura.xml -targetdir:./reports/coverage -reporttypes:Html minimumCoverageThresholds:lineCoverage=0 minimumCoverageThresholds:branchCoverage=0 minimumCoverageThresholds:methodCoverage=0",
 		"test:mutation": "dotnet r clean && dotnet stryker --output . -m:1",
 		"start": "dotnet r clean && func start --dotnet-isolate --port 7001"
