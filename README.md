@@ -1,7 +1,7 @@
 # azure-function-update-counter
 
 ![version](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2Fcdde25b73dd583aa4209d97f440c4abd%2Fraw%2Fazure-function-update-counter-version.json)
-[![build](https://img.shields.io/github/actions/workflow/status/yadickson/azure-function-update-counter/dotnet.yml?branch=main&style=flat-square)](https://github.com/yadickson/azure-function-update-counter/actions/workflows/ci.yml)
+[![build](https://img.shields.io/github/actions/workflow/status/yadickson/azure-function-update-counter/ci.yml?branch=main&style=flat-square)](https://github.com/yadickson/azure-function-update-counter/actions/workflows/ci.yml)
 ![tests](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2Fcdde25b73dd583aa4209d97f440c4abd%2Fraw%2Fazure-function-update-counter-junit-tests.json)
 ![coverage](https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fgist.githubusercontent.com%2Fyadickson%2Fcdde25b73dd583aa4209d97f440c4abd%2Fraw%2Fazure-function-update-counter-cobertura-coverage.json)
 
