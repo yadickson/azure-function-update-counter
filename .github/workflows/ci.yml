@@ -1,0 +1,18 @@
+name: CSharp Build Process
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+
+jobs:    
+
+  ci:
+    uses: yadickson/workflows/.github/workflows/integration.yml@v1
+    with: 
+      container-image: mcr.microsoft.com/dotnet/sdk:8.0
+    secrets: inherit
+
