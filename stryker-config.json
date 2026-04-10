@@ -18,13 +18,8 @@
       "break": 0
     },
     "verbosity": "info",
-    "reporters": [
-      "html",
-      "cleartext",
-      "progress",
-      "dots"
-    ],
-    "report-file-name": "mutation-report",
+    "reporters": ["cleartext", "dots", "html", "json"],
+    "report-file-name": "mutation",
     "break-on-initial-test-failure": false    
   }
 }
